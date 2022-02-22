@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+}
+  
+:root {
+    --primary: #44e9ff;
+    --secondary: #497980;
+    --tertiary: rgb(192, 246, 253);
+    --grey: #333;
+    font-size: 62.5%;
+}
+
+body {
+    background: #ededed;
+    color: var(--grey);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 25px;
+}
+main {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding: 10%;
+}
+ 
+main h1 {
+    font-size: 60px;
+}
+
+/* Button Styles*/
+.btn {
+    background-color: rgb(76, 48, 129);
+    padding: 10px 40px;
+    border-radius: 10px;
+}
+.btn p {
+    color: aliceblue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    float: left;
+}
