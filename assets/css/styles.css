@@ -27,19 +27,23 @@ header {
 }
 main {
     margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    padding: 10%;
+    padding: 0 10%;
 }
- 
+
+
+/* Main section styles*/
 main h1 {
     font-size: 60px;
+}
+main p {
+    font-size: 14px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 /* Button Styles*/
 .btn {
     background-color: rgb(76, 48, 129);
-    padding: 10px 40px;
+    padding: 20px 20px;
     border-radius: 10px;
 }
 .btn p {
