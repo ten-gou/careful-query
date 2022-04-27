@@ -1,12 +1,12 @@
-var timerEl = document.getElementById('countdown');
-var ButtonEl = document.getElementsByClassName('btn');
+// var timerEl = document.getElementById('countdown');
+// var ButtonEl = document.getElementsByClassName('btn');
 var startTimerEl = document.getElementById('start-button');
 var HighScoreEl = document.getElementById('high-score');
 var AnswerBoxEl = document.getElementById('answer-box');
 var timeLeft = 0;
 var Score = 0;
 var questionNumberCounter = 0;
-var questionArray = ["1", "2", "3",];
+const question = require('./questions')
 
 // Timed countdown function
 function countdown() {
@@ -52,6 +52,7 @@ function createNewButton() {
   AnswerBoxEl.appendChild(quizButtonEl);
 }
 
+console.log(question);
 // ButtonEl.addEventListener('click', createNewButton);
 
 // Start Button, with a check to see if the countdown is already running
