@@ -1,0 +1,28 @@
+{
+  "name": "timed-quiz",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node js/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ten-gou/week-four-challenge.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ten-gou/week-four-challenge/issues"
+  },
+  "homepage": "https://github.com/ten-gou/week-four-challenge#readme",
+  "dependencies": {
+    "express": "^4.18.0",
+    "inquirer": "^8.2.3",
+    "node-fetch": "^2.6.7",
+    "reactjs": "^1.0.0",
+    "requirejs": "^2.3.6",
+    "tailwindcss": "^3.0.24"
+  },
+  "description": ""
+}
