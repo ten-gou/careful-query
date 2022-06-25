@@ -4,16 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Timed Quiz Template</title>
-
+    <title>Timed Coding Quiz</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./css/styles.css"> <!-- personal stylesheet -->
 </head>
-<body>
+<body class="bg-teal-50">
     <!-- header element with score and timer -->
-    <header></header>
+    <header id="header" class="flex grid flex-row mb-6 bg-cyan-200 py-4">
+        <h1 class="justify-self-center py-2 text-amber-500 font-mono font-bold text-2xl border-b-indigo-400 border-b-4 m-2">Timed Coding Quiz!</h1>
+        <div id="timer" class="justify-self-center bg-blue-500 p-3 m-3 rounded-lg text-slate-100 font-mono"></div>
+    </header>
 
-    <main id="main_body"></main>
+    <main id="main_body" class="flex text-center flex-col my-8 p-12 w-full"></main>
 
     <script src="./js/index.js"></script> <!-- scripts -->
+    <script src="./js/timer.js"></script>
+    <script src="./js/questionList.js"></script>
 </body>
 </html>
