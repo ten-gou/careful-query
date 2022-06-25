@@ -92,31 +92,44 @@ const resultScreen = () => {
     while (main_body.hasChildNodes()) {
         main_body.removeChild(main_body.firstElementChild)
     }
+    if (question_number - 1 >= 0) {
+        var totalAnswered = question_number - 1;
+    }
+    else {
+        var totalAnswered = 0;
+    }
 
     const timeCounterEl = document.getElementById('timer');
     timeCounterEl.textContent = `DONE!`;
 
     const scoreEl = document.createElement('div');
+    scoreEl.textContent = `Congratulations! You received a score of ${correct_answers} correct answers out of ${totalAnswered} answered questions!`;
+    scoreEl.className = `p-4 m-4`;
+
+    const nameEntryEl = document.createElement('input');
+    nameEntryEl.setAttribute('type', 'text');
+    nameEntryEl.setAttribute('placeholder', 'Enter a Name for your score!');
+    nameEntryEl.setAttribute('name', 'name');
+    nameEntryEl.setAttribute('id', 'nameEntry');
+
     const homeButtonEl = document.createElement('div');
-
-    scoreEl.textContent = `Congratulations! You received a score of ${correct_answers} correct answers out of ${question_number - 1} answered questions!`;
-    scoreEl.className = `p-4 m-4`
-
-    homeButtonEl.textContent = `Try Again?`;
-    homeButtonEl.className = `bg-indigo-300 p-8 my-4 lg:w-1/5 md:w-1/4 sm:w-1/3 rounded-2xl hover:bg-indigo-400 mx-auto text-white`
-
+    homeButtonEl.textContent = `Submit Score!`;
+    homeButtonEl.className = `bg-indigo-300 p-8 my-4 lg:w-1/5 md:w-1/4 sm:w-1/3 rounded-2xl hover:bg-indigo-400 mx-auto text-white`;
     homeButtonEl.setAttribute(`onclick`, `returnHome()`);
 
     main_body.appendChild(scoreEl);
+    main_body.appendChild(nameEntryEl);
     main_body.appendChild(homeButtonEl);
-
 }
 
 // returns the user back to the home screen
 const returnHome = () => {
+    logScore();
+
     while (main_body.hasChildNodes()) {
         main_body.removeChild(main_body.firstElementChild)
     }
+    
     resetScores();
     startMenu();
 }
