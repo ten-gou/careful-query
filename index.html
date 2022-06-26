@@ -12,7 +12,10 @@
     <!-- header element with score and timer -->
     <header id="header" class="flex grid flex-row mb-6 bg-cyan-200 py-4">
         <h1 class="justify-self-center py-2 text-amber-500 font-mono font-bold text-2xl border-b-indigo-400 border-b-4 m-2">Timed Coding Quiz!</h1>
-        <div id="timer" class="justify-self-center bg-blue-500 p-3 m-3 rounded-lg text-slate-100 font-mono"></div>
+        <div class="flex justify-between">
+            <div id="score" class="justify-self-start bg-blue-500 p-3 m-3 rounded-lg text-slate-100 font-mono"></div>
+            <div id="timer" class="justify-self-end bg-blue-500 p-3 m-3 rounded-lg text-slate-100 font-mono"></div>
+        </div>
     </header>
 
     <main id="main_body" class="flex text-center flex-col my-8 p-12 w-full"></main>

@@ -2,6 +2,8 @@ const main_body = document.getElementById('main_body');
 
 const ulEl = document.createElement('ul');
 
+const score = document.getElementById('score');
+
 var question_number = 0; // sets a question number function
 var correct_answers = 0; // sets a tracker for how many correct answers you received
 
@@ -36,6 +38,9 @@ const startMenu =  () => {
     button.className = "bg-indigo-300 p-8 my-4 lg:w-1/5 md:w-1/4 sm:w-1/3 rounded-2xl hover:bg-indigo-400 mx-auto text-white";
 
     main_body.appendChild(button);
+
+    score.setAttribute('onclick', 'showScore()');
+    score.textContent = `View Scores`;
 };
 
 // Creates the Quiz answers and Questions
@@ -52,6 +57,9 @@ const questionlist = () => {
         timer();
     }
 
+    score.textContent = `View Score Currently Disabled`;
+    score.setAttribute('onclick', `disableScore()`);
+    
     // Question Number FXN
     question_number++;
     console.log(question_number);
